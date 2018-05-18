@@ -1,0 +1,24 @@
+.menu-section {
+  background-color: $darken-bg;
+  height: 700px;
+  header {
+    margin-top: 170px;
+  }
+}
+
+.menu-content {
+  &__item {
+    position: relative;
+    background: #fff;
+  }
+  &__image {
+    height: 160px;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+// .card-small {
+//   max-width: calc(25% - 30px) !important;
+//   margin: 15px;
+// }

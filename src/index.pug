@@ -1,0 +1,378 @@
+- var nav_links = ['about us', 'pages', 'services', 'menu', 'gallery', 'blog', 'contacts']
+
+
+doctype html
+html(lang="en")
+	head
+		meta(charset="utf-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+		//- Bootstrap CSS 
+		link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous")
+		link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous")
+		link(href="https://fonts.googleapis.com/css?family=PT+Serif:400,700" rel="stylesheet")
+		//- Main CSS
+		link(rel="stylesheet", href="css/style.min.css")
+
+		title Royal Event Catering
+	body
+		header.header
+			nav.navbar.navbar-expand-lg
+				button.navbar-toggler(type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation")
+					span.navbar-toggler-icon
+				.collapse.navbar-collapse(id="main-menu")
+					ul.navbar-nav.align-items-center.mx-auto
+						li.nav-item
+							i.fas.fa-home
+						each val in nav_links
+							li.nav-item: a.nav-link(href="#"+val)= val
+		section.top
+			.container
+				.row.align-items-center
+					.col-sm-2.text-right
+						p
+							i.fas.fa-phone
+							span 123-456-7890
+							br
+							span info@yoursite.com
+					.col.logo
+						img.mx-auto.d-block(src="img/Logo.png", alt="main logo")
+					.col-sm-2
+						p
+							i.fas.fa-shopping-cart
+							span Your cart:
+							br
+							span 0 Items - $0.00
+
+		section.slider
+
+			#carousel.carousel.slide(data-ride="carousel" data-interval="3000")
+				.carousel-caption-fixed
+					h3.carousel-caption__title A perfect blend of 
+						br
+						| sensational food
+					a.button(href="#") order service
+				ol.carousel-indicators
+					li.active(data-target="#carousel" data-slide-to="0")
+					li(data-target="#carousel" data-slide-to="1")
+					li(data-target="#carousel" data-slide-to="2")
+					li(data-target="#carousel" data-slide-to="3")
+				a.next.next-big(href="#")
+					i.fas.fa-angle-down
+				.carousel-inner
+					.carousel-item.active
+						img.d-block.w-100(src="img/slider1.jpg" alt="First slide")
+					.carousel-item
+						img.d-block.w-100(src="img/slider2.jpg" alt="First slide")
+					.carousel-item
+						img.d-block.w-100(src="img/slider3.jpg" alt="First slide")
+					.carousel-item
+						img.d-block.w-100(src="img/slider4.jpg" alt="First slide")
+			
+		section.welcome-section(id='about us')
+			.container
+				header.section-header
+					h6.section-header__subtitle Catering	
+					h4.section-header__title Welcome to The Best
+						br
+						| Catering Company
+				.row.welcome-content
+					.col-sm-4
+						.welcome-content__item
+							.welcome-content__image(style="background: url(img/welcome1.jpg)")
+							p.welcome-content__text.text-white Events
+							a.next.next-middle(href="#")
+								i.fas.fa-angle-down
+					.col-sm-4
+						.welcome-content__item
+							.welcome-content__image(style="background: url(img/welcome2.jpg)")
+							p.welcome-content__text.text-white Food &
+								br 
+								|drinks
+							a.next.next-middle(href="#")
+								i.fas.fa-angle-down
+					.col-sm-4
+						.welcome-content__item
+							.welcome-content__image(style="background: url(img/welcome3.jpg)")
+							p.welcome-content__text.text-white Venues
+							a.next.next-middle(href="#")
+								i.fas.fa-angle-down
+				.text-center.welcome-section__button
+					a.button(href="#") order service
+			
+		section.hero.about-section
+			.container
+				header.section-header
+					h6.section-header__subtitle.text-white about us	
+					h4.section-header__title.text-white A Short Story About
+						br
+						| Our Company
+				.card.border-0
+					.row
+						.col-sm-6.p-0.card__img
+							img.img-fluid(src="img/aboutCARD.jpg", alt="")
+						.col-sm-6.card__text
+							h3.card__title Perfect Blend of Sensational Food, 
+								br
+								| Inspiring Ideas and Professional Staff
+							p
+								span.card__year 1997 
+								span - Lorem ipsum dolor sit amet, consecte adipiscing elit, sed 
+							p.card__descr Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure. dolor in hendrerit in vulputate velit.
+							a.button(href="#") read full story
+			
+		section.menu-section(id='menu')
+			.container
+				header.section-header.text-center
+					h6.section-header__subtitle catering	
+					h4.section-header__title Our Menu
+				.row.menu-content.text-center
+					.col-sm-6.col-lg-3
+						.menu-content__item
+							.menu-content__image(style="background-image: url(img/mebu1.jpg)")
+							p.menu-content__text Canapes 
+							a.next.next-small(href="#")
+								i.fas.fa-angle-down
+					.col-sm-6.col-lg-3
+						.menu-content__item
+							.menu-content__image(style="background-image: url(img/menu2.jpg)")
+							p.menu-content__text small plates
+							a.next.next-small(href="#")
+								i.fas.fa-angle-down
+					.col-sm-6.col-lg-3
+						.menu-content__item
+							.menu-content__image(style="background-image: url(img/menu3.jpg)")
+							p.menu-content__text sweets
+							a.next.next-small(href="#")
+								i.fas.fa-angle-down
+					.col-sm-6.col-lg-3
+						.menu-content__item
+							.menu-content__image(style="background-image: url(img/menu4.jpg)")
+							p.menu-content__text drinks
+							a.next.next-small(href="#")
+								i.fas.fa-angle-down
+				h3.text-center Each more
+				.text-center
+					a.button(href="#") view full menu
+			
+		section.events-section
+			.container
+				header.section-header.text-center
+					h6.section-header__subtitle services
+					h4.section-header__title Planning a Fabulous
+						br
+						| Event?
+				.row
+					.col-md-4
+						ul.events-left
+							li.event
+								.event__counter 01
+								h4.event__title weddings
+								p.event__text Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+							li.event
+								.event__counter 02
+								h4.event__title corporate
+								p.event__text Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+							li.event
+								.event__counter 03
+								h4.event__title socials
+								p.event__text Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+					.col-md-4.rounded-bg.mx-auto.d-none.d-md-block(style="background-image: url(img/rounded.png)")
+					.col-md-4
+						ul.events-right
+							li.event
+								.event__counter 04
+								h4.event__title picnics
+								p.event__text Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+							li.event
+								.event__counter 05
+								h4.event__title festivals
+								p.event__text Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+							li.event
+								.event__counter 06
+								h4.event__title private Paties
+								p.event__text Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+				.text-center.events-section__button
+					a.button(href="#") more services
+			
+		section.hero.d-flex.justify-content-center.align-items-center.book-section(style="background-image: url(img/bookTodayBG.jpg)")
+			.inner-content
+				header.section-header.text-center.text-white
+					h6.section-header__subtitle book today
+					h4.section-header__title Book Your Tasting Session
+						br
+						| or Discuss Your Project
+				.text-center
+					a.button(href="#") send free request
+			
+		section.testimonials-section
+			.container
+				header.section-header.text-center
+						h6.section-header__subtitle testimonials
+						h4.section-header__title Clients About Us
+				#testimonials-carousel.carousel.slide(data-ride="carousel" data-interval="112000")
+					.carousel-inner.text-center
+						.carousel-item.active
+							img.img-rounded.slider-top-img(src="img/clientsAbout.jpg" alt="First slide")
+							blockquote 
+								p.blockquote-text “Having worked with a number of caterers over the years, their level of service was notably
+									br
+									| high and they were integral to making the day a success”.
+								p.blockquote-author laura & Adam Ashley, NY
+						.carousel-item
+							img.img-rounded.slider-top-img(src="img/clientsAbout.jpg" alt="First slide")
+							blockquote
+								p.blockquote-text “Having worked with a number of caterers over the years, their level of service was notably high and they were integral to making the day a success”.
+								p.blockquote-author laura & Adam Ashley, NY
+						a.carousel-control-prev(href="#testimonials-carousel" role="button" data-slide="prev")
+							i.fas.fa-angle-left(aria-hidden="true")
+							span.sr-only Previous
+						a.carousel-control-next(href="#testimonials-carousel" role="button" data-slide="next")
+							i.fas.fa-angle-right(aria-hidden="true")
+							span.sr-only Next
+				
+		section.blog-section.mb-5(id='blog')
+			.container
+					header.section-header.text-center
+						h6.section-header__subtitle blog
+						h4.section-header__title Recent Articles
+					.row.text-center
+						.col
+							.article
+								.article__img(style="background-image: url(img/article1.jpg)")
+								.article__body 
+									p.article__date Jun 20, 2016
+									h5.article__text We Can Help Find a Location
+										br
+										| That's Right For You
+						.col
+							.article
+								.article__img(style="background-image: url(img/article2.jpg)")
+								.article__body
+									p.article__date Jun 20, 2016
+									h5.article__text
+						.col
+							.article
+								.article__img(style="background-image: url(img/article3.jpg)")
+								.article__body
+									p.article__date Jun 20, 2016
+									h5.article__text
+					.text-center
+						a.button(href="#") more articles
+				
+			section.chef-section.hero(style="background-image: url(img/whoBehindBG.jpg)")
+				.container
+					header.section-header.text-center.text-white
+						h6.section-header__subtitle blog
+						h4.section-header__title Recent Articles
+					.card.border-0.mt-5
+						.row.no-gutters
+							.col-sm-6
+								img.img-fluid(src="img/chefPhoto.jpg", alt="")
+							.col-sm-6.p-3
+								h3 A Perfect Blend of Sensational Food, 
+									br
+									| Inspiring Ideas and Professional Staff
+								p
+									span.card-year 1997 
+									span - Lorem ipsum dolor sit amet, consecte adipiscing elit, sed 
+								p.card-text Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure. dolor in hendrerit in vulputate velit.
+								a.button(href="#") read full story
+				
+			section.team-section
+				.container
+					header.section-header
+							h6.section-header__subtitle staff
+							h4.section-header__title Meet The Team
+					.row
+						.col-sm-3.team-member
+							.team-member__photo(style="background-image: url(img/team1.png)")
+							h4.team-member__name Amanda Finch
+							.team-member__position Chef, Co-Funder
+						.col-sm-3.team-member
+							.team-member__photo(style="background-image: url(img/team2.png)")
+							h4.team-member__name Amanda Finch
+							.team-member__position Chef, Co-Funder
+						.col-sm-3.team-member
+							.team-member__photo(style="background-image: url(img/team3.png)")
+							h4.team-member__name Amanda Finch
+							.team-member__position Chef, Co-Funder
+						.col-sm-3.team-member
+							.team-member__photo(style="background-image: url(img/team4.png)")
+							h4.team-member__name Amanda Finch
+							.team-member__position Chef, Co-Funder
+				
+			section.gallery-section(id='gallery')
+				header.section-header
+					h6.section-header__subtitle staff
+					h4.section-header__title Check Our Recent
+						br
+						| Projects
+				.row.hero
+					.col-sm-8.h-100
+						.row.h-50
+							.col-sm-6.gallery__img(style="background-image: url(img/dish1.jpg)")
+							.col-sm-6.gallery__img(style="background-image: url(img/dish2.jpg)")
+						.row.h-50
+							.col-sm-6.gallery__img(style="background-image: url(img/dish3.jpg)")
+							.col-sm-6.gallery__img(style="background-image: url(img/dish4.jpg)")
+					.col-sm-4.h-100.gallery__img(style="background-image: url(img/dish5.jpg)")
+				.text-center
+					a.button(href="#") view more projects
+
+			section.contacts-section
+				.container
+					header.section-header
+							h6.section-header__subtitle contact us
+							h4.section-header__title Leave a Feadback or
+								br
+								| Ask a Question
+					form(action="#")
+						.form-row
+							.col
+								.form-group
+									input.form-control.is-valid(type="text" placeholder="Your name")
+							.col
+								.form-group
+									input.form-control.is-invalid(type="email" placeholder="e-mail address:")
+									
+						.form-group
+							textarea.form-control(placeholder="send a message:")
+						.text-center
+						a.button(href="#") send message
+			footer
+				.container
+					.row
+						.col-sm-4.text-right
+							p
+								span 123-456-7890
+								br
+								span info@yoursite.com
+						.col.logo
+							img.mx-auto.d-block(src="img/Logo.png", alt="main logo")
+						.col-sm-4
+							p
+								span 123, New Lenox
+								br
+								span Chicago, IL 60606
+					.footer__social-container
+						.footer__social
+							i.fab.fa-facebook-f
+							i.fab.fa-twitter
+							i.fab.fa-pinterest-p
+							i.fab.fa-instagram
+					p.text-center.text-muted Ancora © 2016 All Rights Reserved Terms of Use and Privacy Policy
+							
+					
+  
+
+
+
+					
+
+
+			//- Optional JavaScript 
+		script(src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  	crossorigin="anonymous")
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous")
+		script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous")
+		script(src="main.js")
