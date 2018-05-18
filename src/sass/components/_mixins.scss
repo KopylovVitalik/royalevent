@@ -19,3 +19,39 @@ $mobile-width: 600px;
     @content;
   }
 }
+
+%grey-line {
+  :after {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 2px;
+    width: 112px;
+    background-color: #a7a99a;
+    z-index: 100;
+  }
+}
+
+%white-line {
+  :after {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 2px;
+    width: 112px;
+    background-color: #fff;
+    z-index: 100;
+  }
+}
+
+%small-grey-upper {
+  font-size: 14px;
+  font-weight: bold;
+  color: $grey-text;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+}

@@ -108,17 +108,17 @@ html(lang="en")
 						| Our Company
 				.card.border-0
 					.row
-						.col-sm-6.p-0.card__img
-							img.img-fluid(src="img/aboutCARD.jpg", alt="")
-						.col-sm-6.card__text
-							h3.card__title Perfect Blend of Sensational Food, 
-								br
-								| Inspiring Ideas and Professional Staff
-							p
-								span.card__year 1997 
-								span - Lorem ipsum dolor sit amet, consecte adipiscing elit, sed 
-							p.card__descr Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure. dolor in hendrerit in vulputate velit.
-							a.button(href="#") read full story
+						.col-sm-6.card__img(style="background-image: url(img/aboutCARD.jpg)")
+						.col-sm-6
+							.card__text
+								h3.card__title Perfect Blend of Sensational Food,
+									br
+									| Inspiring Ideas and Professional Staff
+								p
+									span.card__year 1997 
+									span - Lorem ipsum dolor sit amet, consecte adipiscing elit, sed 
+								p.card__descr Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure. dolor in hendrerit in vulputate velit.
+								a.button(href="#") read full story
 			
 		section.menu-section(id='menu')
 			.container
@@ -232,54 +232,56 @@ html(lang="en")
 				
 		section.blog-section.mb-5(id='blog')
 			.container
-					header.section-header.text-center
-						h6.section-header__subtitle blog
-						h4.section-header__title Recent Articles
-					.row.text-center
-						.col
-							.article
-								.article__img(style="background-image: url(img/article1.jpg)")
-								.article__body 
-									p.article__date Jun 20, 2016
-									h5.article__text We Can Help Find a Location
-										br
-										| That's Right For You
-						.col
-							.article
-								.article__img(style="background-image: url(img/article2.jpg)")
-								.article__body
-									p.article__date Jun 20, 2016
-									h5.article__text
-						.col
-							.article
-								.article__img(style="background-image: url(img/article3.jpg)")
-								.article__body
-									p.article__date Jun 20, 2016
-									h5.article__text
-					.text-center
-						a.button(href="#") more articles
-				
-			section.chef-section.hero(style="background-image: url(img/whoBehindBG.jpg)")
-				.container
-					header.section-header.text-center.text-white
-						h6.section-header__subtitle blog
-						h4.section-header__title Recent Articles
-					.card.border-0.mt-5
-						.row.no-gutters
-							.col-sm-6
-								img.img-fluid(src="img/chefPhoto.jpg", alt="")
-							.col-sm-6.p-3
-								h3 A Perfect Blend of Sensational Food, 
+				header.section-header.text-center
+					h6.section-header__subtitle blog
+					h4.section-header__title Recent Articles
+				.row.text-center
+					.col-sm-4
+						.article
+							.article__img(style="background-image: url(img/article1.jpg)")
+							.article__body 
+								p.article__date Jun 20, 2016
+								h5.article__text We Can Help Find a Location
 									br
-									| Inspiring Ideas and Professional Staff
-								p
-									span.card-year 1997 
-									span - Lorem ipsum dolor sit amet, consecte adipiscing elit, sed 
-								p.card-text Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure. dolor in hendrerit in vulputate velit.
+									| That's Right For You
+					.col-sm-4
+						.article
+							.article__img(style="background-image: url(img/article2.jpg)")
+							.article__body
+								p.article__date Jun 20, 2016
+								h5.article__text Catering Services for 
+									br
+									| Fabulous Corporate Events
+					.col-sm-4
+						.article
+							.article__img(style="background-image: url(img/article3.jpg)")
+							.article__body
+								p.article__date Jun 20, 2016
+								h5.article__text Planning a Wedding Menu 
+									br
+									| Can Be Daunting
+				.text-center.blog-section__button
+					a.button(href="#") more articles
+				
+		section.chef-section.hero(style="background-image: url(img/whoBehindBG.jpg)")
+			.container
+				header.section-header.text-center.text-white
+					h6.section-header__subtitle blog
+					h4.section-header__title Who’s Behind Great
+						br
+						| Service?
+				.card.border-0
+					.row
+						.col-sm-6.card__img(style="background-image: url(img/chefPhoto.jpg)")
+						.col-sm-6
+							.card__text
+								p.card__descr.with-line Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat  nulla facilisis at vero eros.”
+								h3.card__title Andreo Moreno,
+									small Master-Chef
 								a.button(href="#") read full story
 				
-			section.team-section
-				.container
+		section.team-section
+			.container
 					header.section-header
 							h6.section-header__subtitle staff
 							h4.section-header__title Meet The Team
@@ -301,66 +303,67 @@ html(lang="en")
 							h4.team-member__name Amanda Finch
 							.team-member__position Chef, Co-Funder
 				
-			section.gallery-section(id='gallery')
-				header.section-header
-					h6.section-header__subtitle staff
-					h4.section-header__title Check Our Recent
-						br
-						| Projects
-				.row.hero
-					.col-sm-8.h-100
-						.row.h-50
-							.col-sm-6.gallery__img(style="background-image: url(img/dish1.jpg)")
-							.col-sm-6.gallery__img(style="background-image: url(img/dish2.jpg)")
-						.row.h-50
-							.col-sm-6.gallery__img(style="background-image: url(img/dish3.jpg)")
-							.col-sm-6.gallery__img(style="background-image: url(img/dish4.jpg)")
-					.col-sm-4.h-100.gallery__img(style="background-image: url(img/dish5.jpg)")
-				.text-center
-					a.button(href="#") view more projects
+		section.gallery-section(id='gallery')
+			header.section-header
+				h6.section-header__subtitle staff
+				h4.section-header__title Check Our Recent
+					br
+					| Projects
+			.row.gallery
+				.col-sm-8.h-100
+					.row.h-50
+						.col-sm-6.gallery__img(style="background-image: url(img/dish1.jpg)")
+						.col-sm-6.gallery__img(style="background-image: url(img/dish2.jpg)")
+					.row.h-50
+						.col-sm-6.gallery__img(style="background-image: url(img/dish3.jpg)")
+						.col-sm-6.gallery__img(style="background-image: url(img/dish4.jpg)")
+				.col-sm-4.h-100.gallery__img(style="background-image: url(img/dish5.jpg)")
+			.text-center.gallery-section__button
+				a.button(href="#") view more projects
 
-			section.contacts-section
-				.container
-					header.section-header
-							h6.section-header__subtitle contact us
-							h4.section-header__title Leave a Feadback or
-								br
-								| Ask a Question
-					form(action="#")
-						.form-row
-							.col
-								.form-group
-									input.form-control.is-valid(type="text" placeholder="Your name")
-							.col
-								.form-group
-									input.form-control.is-invalid(type="email" placeholder="e-mail address:")
+		section.contacts-section
+			.container
+				header.section-header
+					h6.section-header__subtitle contact us
+					h4.section-header__title Leave a Feadback or
+						br
+						| Ask a Question
+				form#contacts-form.contacts-form(action="#")
+					.form-row
+						.col
+							.form-group
+								input.form-control(type="text" placeholder="Your name")
+						.col
+							.form-group
+								input.form-control(type="email" placeholder="e-mail address:")
 									
-						.form-group
-							textarea.form-control(placeholder="send a message:")
+					.form-group
+						textarea.form-control(placeholder="send a message:" rows="10")
 						.text-center
-						a.button(href="#") send message
-			footer
-				.container
-					.row
-						.col-sm-4.text-right
-							p
-								span 123-456-7890
-								br
-								span info@yoursite.com
-						.col.logo
-							img.mx-auto.d-block(src="img/Logo.png", alt="main logo")
-						.col-sm-4
-							p
-								span 123, New Lenox
-								br
-								span Chicago, IL 60606
-					.footer__social-container
-						.footer__social
-							i.fab.fa-facebook-f
-							i.fab.fa-twitter
-							i.fab.fa-pinterest-p
-							i.fab.fa-instagram
-					p.text-center.text-muted Ancora © 2016 All Rights Reserved Terms of Use and Privacy Policy
+					.text-center.contacts-section__button
+						input.button.border-0(type="submit" value="send message")
+		footer.footer
+			.container
+				.row.align-items-center
+					.col-sm-4.text-right
+						p.footer__contacts
+							span 123-456-7890
+							br
+							span info@yoursite.com
+					.col.logo
+						img.mx-auto.d-block(src="img/Logo.png", alt="main logo")
+					.col-sm-4
+						p.footer__contacts
+							span 123, New Lenox
+							br
+							span Chicago, IL 60606
+				.footer__social-container
+					.footer__social
+						i.fab.fa-facebook-f
+						i.fab.fa-twitter
+						i.fab.fa-pinterest-p
+						i.fab.fa-instagram
+				p.text-center.text-muted Ancora © 2016 All Rights Reserved Terms of Use and Privacy Policy
 							
 					
   

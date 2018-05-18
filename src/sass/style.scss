@@ -56,6 +56,9 @@ p {
 .hero {
   height: 700px;
   position: relative;
+  // background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
   // opacity: 0.5;
   // background-color: #232323;
   // background-blend-mode: multiply;
@@ -109,29 +112,15 @@ p {
   z-index: 100;
   text-align: center;
   &__subtitle {
-    font-size: 14px;
-    font-weight: bold;
-    color: $grey-text;
-    letter-spacing: 1.4px;
+    @extend %small-grey-upper;
     margin-bottom: 20px;
-    text-transform: uppercase;
   }
   &__title {
     color: #434343;
     font-size: 35px;
     font-weight: bold;
   }
-  &:after {
-    position: absolute;
-    content: '';
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    height: 2px;
-    width: 112px;
-    background-color: #a7a99a;
-    z-index: 100;
-  }
+  @extend %grey-line;
 }
 
 // Next component
@@ -192,8 +181,28 @@ p {
 .card {
   box-shadow: 0px 5px 43px 0 rgba(144, 126, 101, 0.07);
   z-index: 10000;
+  &__img {
+    position: relative;
+    background-size: cover;
+    height: 570px;
+    background-clip: border-box;
+    &:before {
+      content: '';
+      display: block;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      position: absolute;
+      pointer-events: none;
+      opacity: 0.1;
+      background: #767676;
+      transition: opacity 2.5s;
+      z-index: 2;
+    }
+  }
   &__text {
-    padding: 74px 69px 0px 86px;
+    padding: 74px 70px 0px 70px;
   }
   &__title {
     font-size: 22px;
@@ -207,7 +216,31 @@ p {
   }
   &__descr {
     font-size: 14px;
-    line-height: 24px;
+    line-height: 1.71;
+    color: #929292;
+  }
+  .button {
+    margin-top: 57px;
+  }
+  .with-line {
+    position: relative;
+    padding-bottom: 41px;
+    margin-bottom: 41px;
+    &:after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      content: '';
+      width: 111px;
+      height: 2px;
+      background-color: #a7a99a;
+    }
+  }
+}
+
+@include tablet {
+  .card {
+    position: static;
   }
 }
 
@@ -220,37 +253,69 @@ p {
 // ==== ARTICLE ====
 
 .article {
+  position: relative;
+  @extend %grey-line;
   &__img {
-    height: 100px;
+    height: 200px;
+    margin-bottom: 35px;
+    background-size: cover;
+  }
+  &__date {
+    @extend %small-grey-upper;
+    margin-bottom: 16px;
+  }
+  &__text {
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 1.5;
+    text-align: center;
+    color: #434343;
+    padding-bottom: 26px;
   }
 }
-.card {
-  z-index: 100;
+
+.blog-section__button {
+  margin: 46px auto 110px;
 }
 
-// .team-section,
-// .menu-section {
-//   background-color: $darken-bg;
-//   header {
-//     padding-top: 150px;
-//   }
-// }
+// ===== TEAM =====
 
 .team-section {
   background-color: $darken-bg;
+  padding-bottom: 107px;
+  header {
+    padding-top: 280px;
+  }
 }
 
 .team-member {
   text-align: center;
   &__photo {
-    height: $team-photo-size;
-    width: $team-photo-size;
-    margin: 0 auto;
+    width: 17vw;
+    height: 17vw;
+    margin: 0 auto 48px;
     background-size: cover;
+  }
+  &__name {
+    margin-bottom: 16px;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.75;
+    text-align: center;
+    color: $grey-text;
+  }
+  &__position {
+    line-height: 1.71;
+    text-align: center;
+    color: #929292;
   }
 }
 
 .gallery {
+  &-section__button {
+    margin: 56px auto 110px;
+  }
+  height: 600px;
   &__img {
     padding: 15px;
     background-clip: content-box;
@@ -266,12 +331,42 @@ p {
 
 .contacts-section {
   background-color: $darken-bg;
+  padding-bottom: 110px;
+}
+
+.contacts-form {
+  margin: 0 185px;
+  .form-group {
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  .form-control {
+    border-radius: 0;
+    border: 0;
+    outline: none;
+    padding: 20px 30px;
+    background-color: #fff;
+  }
+  input:not([type='submit']),
+  textarea,
+  input::placeholder,
+  textarea::placeholder {
+    @extend %small-grey-upper;
+  }
+}
+
+.footer {
+  margin: 124px auto 40px;
+  &__contacts {
+    @extend %small-grey-upper;
+  }
 }
 
 .footer__social {
+  margin: 58px auto;
   position: relative;
   &-container {
-    margin: 0 auto;
+    // margin: 58px auto;
     text-align: center;
     display: flex;
     align-items: center;
@@ -290,22 +385,25 @@ p {
   }
 }
 
-.book-section {
+.book-section,
+.chef-section {
   background-position: center;
   .section-header {
-    padding-top: 0;
     &__subtitle {
       color: #fff;
     }
     &__title {
       color: #fff;
     }
-    &:after {
-      background-color: #fff;
-    }
+    @extend %white-line;
   }
 }
 
-.article {
-  box-shadow: 1px 1px 6px 2px #d0cece;
+.book-section {
+  .section-header {
+    padding-top: 0;
+  }
 }
+// .article {
+//   box-shadow: 1px 1px 6px 2px #d0cece;
+// }
