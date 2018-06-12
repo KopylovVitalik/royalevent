@@ -150,8 +150,8 @@ p {
 // Button component
 .button {
   position: relative;
-  z-index: 100;
   display: inline-block;
+  z-index: 100;
   background-color: #ffb18b;
   text-align: center;
   text-transform: uppercase;
@@ -160,6 +160,11 @@ p {
   color: #fff;
   letter-spacing: 1.4px;
   padding: 25px 55px;
+  transition: 0.8s;
+  &:hover {
+    color: #fff;
+    box-shadow: 0 0 0 2px darken(#ffb18b, 20%) inset;
+  }
 }
 
 @include tablet {
