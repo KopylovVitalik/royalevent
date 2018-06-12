@@ -15,28 +15,37 @@ html(lang="en")
 
 		title Royal Event Catering
 	body
+
 		header.header
-			nav.navbar.navbar-expand-lg
+			nav.navbar.navbar-expand-md.navbar-light.bg-light(id='top')
 				button.navbar-toggler(type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation")
 					span.navbar-toggler-icon
+				a.navbar-brand.d-md-none(href="#"): img.img-fluid(src="img/Logo.png", alt="Main logo")
+				p.d-md-none
+					i.fas.fa-shopping-cart
+					span Your cart:
+					br
+					span 0 Items - $0.00
 				.collapse.navbar-collapse(id="main-menu")
 					ul.navbar-nav.align-items-center.mx-auto
 						li.nav-item
-							i.fas.fa-home
+							a.nav-link(href="#home"): i.fas.fa-home
 						each val in nav_links
 							li.nav-item: a.nav-link(href="#"+val)= val
+				
+
 		section.top
 			.container
 				.row.align-items-center
-					.col-sm-2.text-right
+					.col-sm-2.top-text.top__text--left.order-1.order-sm-0
 						p
 							i.fas.fa-phone
 							span 123-456-7890
 							br
 							span info@yoursite.com
-					.col.logo
+					.col.logo.d-none.d-md-block
 						img.mx-auto.d-block(src="img/Logo.png", alt="main logo")
-					.col-sm-2
+					.col-sm-2.top-text.top__text--right.d-none.d-md-block
 						p
 							i.fas.fa-shopping-cart
 							span Your cart:
@@ -50,7 +59,7 @@ html(lang="en")
 					h3.carousel-caption__title A perfect blend of 
 						br
 						| sensational food
-					a.button(href="#") order service
+					a.button.carousel-caption__button(href="#") order service
 				ol.carousel-indicators
 					li.active(data-target="#carousel" data-slide-to="0")
 					li(data-target="#carousel" data-slide-to="1")
@@ -60,13 +69,13 @@ html(lang="en")
 					i.fas.fa-angle-down
 				.carousel-inner
 					.carousel-item.active
-						img.d-block.w-100(src="img/slider1.jpg" alt="First slide")
+						.d-block.h-100.w-100(style="background-image: url(img/slider1.jpg)")
 					.carousel-item
-						img.d-block.w-100(src="img/slider2.jpg" alt="First slide")
+						.d-block.h-100.w-100(style="background-image: url(img/slider2.jpg)")
 					.carousel-item
-						img.d-block.w-100(src="img/slider3.jpg" alt="First slide")
+						.d-block.h-100.w-100(style="background-image: url(img/slider3.jpg)")
 					.carousel-item
-						img.d-block.w-100(src="img/slider4.jpg" alt="First slide")
+						.d-block.h-100.w-100(style="background-image: url(img/slider4.jpg)")
 			
 		section.welcome-section(id='about us')
 			.container
@@ -108,14 +117,15 @@ html(lang="en")
 						| Our Company
 				.card.border-0
 					.row
-						.col-sm-6.card__img(style="background-image: url(img/aboutCARD.jpg)")
-						.col-sm-6
+						.col-lg
+							.card__img(style="background-image: url(img/aboutCARD.jpg)")
+						.col-lg
 							.card__text
 								h3.card__title Perfect Blend of Sensational Food,
 									br
 									| Inspiring Ideas and Professional Staff
 								p
-									span.card__year 1997 
+									span.card__year 1997
 									span - Lorem ipsum dolor sit amet, consecte adipiscing elit, sed 
 								p.card__descr Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure. dolor in hendrerit in vulputate velit.
 								a.button(href="#") read full story
@@ -150,8 +160,9 @@ html(lang="en")
 							p.menu-content__text drinks
 							a.next.next-small(href="#")
 								i.fas.fa-angle-down
-				h3.text-center Each more
-				.text-center
+				h3.menu-section__footer-text & much more sensational  food & drinks...
+				
+				.menu-section__button.text-center
 					a.button(href="#") view full menu
 			
 		section.events-section
@@ -272,8 +283,9 @@ html(lang="en")
 						| Service?
 				.card.border-0
 					.row
-						.col-sm-6.card__img(style="background-image: url(img/chefPhoto.jpg)")
-						.col-sm-6
+						.col-sm
+							.card__img(style="background-image: url(img/chefPhoto.jpg)")
+						.col-sm
 							.card__text
 								p.card__descr.with-line Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat  nulla facilisis at vero eros.”
 								h3.card__title Andreo Moreno,
@@ -286,22 +298,26 @@ html(lang="en")
 							h6.section-header__subtitle staff
 							h4.section-header__title Meet The Team
 					.row
-						.col-sm-3.team-member
-							.team-member__photo(style="background-image: url(img/team1.png)")
-							h4.team-member__name Amanda Finch
-							.team-member__position Chef, Co-Funder
-						.col-sm-3.team-member
-							.team-member__photo(style="background-image: url(img/team2.png)")
-							h4.team-member__name Amanda Finch
-							.team-member__position Chef, Co-Funder
-						.col-sm-3.team-member
-							.team-member__photo(style="background-image: url(img/team3.png)")
-							h4.team-member__name Amanda Finch
-							.team-member__position Chef, Co-Funder
-						.col-sm-3.team-member
-							.team-member__photo(style="background-image: url(img/team4.png)")
-							h4.team-member__name Amanda Finch
-							.team-member__position Chef, Co-Funder
+						.col-sm-6.col-lg-3
+							.team-member
+								.team-member__photo(style="background-image: url(img/team1.png)")
+								h4.team-member__name Amanda Finch
+								.team-member__position Chef, Co-Funder
+						.col-sm-6.col-lg-3
+							.team-member
+								.team-member__photo(style="background-image: url(img/team2.png)")
+								h4.team-member__name Amanda Finch
+								.team-member__position Chef, Co-Funder
+						.col-sm-6.col-lg-3
+							.team-member
+								.team-member__photo(style="background-image: url(img/team3.png)")
+								h4.team-member__name Amanda Finch
+								.team-member__position Chef, Co-Funder
+						.col-sm-6.col-lg-3
+							.team-member
+								.team-member__photo(style="background-image: url(img/team4.png)")
+								h4.team-member__name Amanda Finch
+								.team-member__position Chef, Co-Funder
 				
 		section.gallery-section(id='gallery')
 			header.section-header
@@ -309,15 +325,21 @@ html(lang="en")
 				h4.section-header__title Check Our Recent
 					br
 					| Projects
-			.row.gallery
-				.col-sm-8.h-100
-					.row.h-50
-						.col-sm-6.gallery__img(style="background-image: url(img/dish1.jpg)")
-						.col-sm-6.gallery__img(style="background-image: url(img/dish2.jpg)")
-					.row.h-50
-						.col-sm-6.gallery__img(style="background-image: url(img/dish3.jpg)")
-						.col-sm-6.gallery__img(style="background-image: url(img/dish4.jpg)")
-				.col-sm-4.h-100.gallery__img(style="background-image: url(img/dish5.jpg)")
+			.gallery
+				.row
+					.col-lg-8
+						.row
+							.col-sm
+								.gallery__img(style="background-image: url(img/dish1.jpg)")
+							.col-sm
+								.gallery__img(style="background-image: url(img/dish2.jpg)")
+						.row
+							.col-sm
+								.gallery__img(style="background-image: url(img/dish3.jpg)")
+							.col-sm
+								.gallery__img(style="background-image: url(img/dish4.jpg)")
+					.col-lg-4.col-sm-6.h-100
+						.gallery__img.gallery__img--big(style="background-image: url(img/dish5.jpg)")
 			.text-center.gallery-section__button
 				a.button(href="#") view more projects
 
@@ -330,10 +352,10 @@ html(lang="en")
 						| Ask a Question
 				form#contacts-form.contacts-form(action="#")
 					.form-row
-						.col
+						.col-lg
 							.form-group
 								input.form-control(type="text" placeholder="Your name")
-						.col
+						.col-lg
 							.form-group
 								input.form-control(type="email" placeholder="e-mail address:")
 									
@@ -342,6 +364,10 @@ html(lang="en")
 						.text-center
 					.text-center.contacts-section__button
 						input.button.border-0(type="submit" value="send message")
+			a(href="#top").next.next-big.next-big--text
+				p: i.fas.fa-angle-up
+				p TOP
+		
 		footer.footer
 			.container
 				.row.align-items-center
@@ -363,7 +389,8 @@ html(lang="en")
 						i.fab.fa-twitter
 						i.fab.fa-pinterest-p
 						i.fab.fa-instagram
-				p.text-center.text-muted Ancora © 2016 All Rights Reserved Terms of Use and Privacy Policy
+				p.text-center.text-muted.footer__text Ancora © 2016 All Rights Reserved Terms of Use and Privacy Policy
+				
 							
 					
   

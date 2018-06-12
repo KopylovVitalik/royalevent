@@ -1,8 +1,16 @@
 .menu-section {
   background-color: $darken-bg;
-  height: 700px;
+  // height: 700px;
   header {
     padding-top: 280px;
+  }
+  &__footer-text {
+    @extend %small-grey-upper;
+    margin: 57px auto 0;
+    text-align: center;
+  }
+  &__button {
+    padding: 56px 0 110px;
   }
 }
 
@@ -15,6 +23,12 @@
     height: 160px;
     background-size: cover;
     background-repeat: no-repeat;
+  }
+  &__text {
+    margin: 0 auto;
+    padding: 42px 0;
+
+    @extend %small-grey-upper;
   }
 }
 

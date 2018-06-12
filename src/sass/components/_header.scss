@@ -1,0 +1,62 @@
+.header {
+  text-transform: uppercase;
+  color: $grey-text;
+  font-size: 14px;
+}
+
+.navbar {
+  letter-spacing: 1.4px;
+  line-height: 1;
+  height: 72px;
+  .nav-item {
+    padding: 0 10px;
+    &:not(:last-child) {
+      border-right: 1px solid #000;
+    }
+  }
+  .nav-link {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+.bg-light {
+  background-color: $darken-bg !important;
+}
+
+.top {
+  .row {
+    height: 149px;
+    line-height: 20px;
+  }
+  .top-text {
+    @extend %small-grey-upper;
+    font-size: 10px;
+    line-height: 12px;
+  }
+  .fas {
+    padding-right: 5px;
+  }
+}
+
+@include tablet {
+  .top {
+    .row {
+      height: auto;
+      padding: 10px;
+    }
+    .top-text {
+      text-align: center;
+      margin: 10px auto;
+    }
+  }
+  .navbar {
+    height: auto;
+    .nav-item {
+      padding: 10px 0;
+      &:not(:last-child) {
+        border-right: none;
+      }
+    }
+  }
+}

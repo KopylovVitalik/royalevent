@@ -1,0 +1,27 @@
+// ==== ARTICLE ====
+
+.article {
+  position: relative;
+  @extend %grey-line;
+  &__img {
+    height: 200px;
+    margin-bottom: 35px;
+    background-size: cover;
+  }
+  &__date {
+    @extend %small-grey-upper;
+    margin-bottom: 16px;
+  }
+  &__text {
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 1.5;
+    text-align: center;
+    color: #434343;
+    padding-bottom: 26px;
+  }
+}
+
+.blog-section__button {
+  margin: 46px auto 110px;
+}

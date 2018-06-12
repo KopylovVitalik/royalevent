@@ -30,7 +30,7 @@
   }
 }
 
-@include tablet {
+@include mobile {
   .event {
     margin-bottom: 54px;
   }
@@ -44,7 +44,7 @@
       }
       &__title {
         &:after {
-          right: 0;
+          left: 0;
         }
       }
     }
@@ -89,5 +89,5 @@
 }
 
 .events-section__button {
-  margin: 65px auto 110px;
+  margin: $section-mb;
 }

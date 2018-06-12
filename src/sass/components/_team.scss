@@ -1,0 +1,31 @@
+// / ===== TEAM =====
+.team-section {
+  background-color: $darken-bg;
+  padding-bottom: 107px;
+  header {
+    padding-top: 280px;
+  }
+}
+
+.team-member {
+  text-align: center;
+  &__photo {
+    width: 17vw;
+    height: 17vw;
+    margin: 0 auto 48px;
+    background-size: cover;
+  }
+  &__name {
+    margin-bottom: 16px;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.75;
+    text-align: center;
+    color: $grey-text;
+  }
+  &__position {
+    line-height: 1.71;
+    text-align: center;
+    color: #929292;
+  }
+}

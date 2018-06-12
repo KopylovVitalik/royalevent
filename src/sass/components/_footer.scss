@@ -1,0 +1,71 @@
+.contacts-section {
+  background-color: $darken-bg;
+  padding-bottom: 110px;
+  position: relative;
+}
+
+.contacts-form {
+  margin: 0 185px;
+  .form-group {
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  .form-control {
+    border-radius: 0;
+    border: 0;
+    outline: none;
+    padding: 20px 30px;
+    background-color: #fff;
+  }
+  input:not([type='submit']),
+  textarea,
+  input::placeholder,
+  textarea::placeholder {
+    @extend %small-grey-upper;
+  }
+}
+
+@include tablet {
+  .contacts-form {
+    margin: 0 30px;
+  }
+}
+
+@include mobile {
+  .contacts-form {
+    margin: 0 auto;
+  }
+}
+
+.footer {
+  margin: 124px auto 40px;
+  &__contacts {
+    @extend %small-grey-upper;
+  }
+  &__social {
+    margin: 58px auto;
+    position: relative;
+    &-container {
+      // margin: 58px auto;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .fab {
+      width: 40px;
+      height: 40px;
+      margin: 0 2px;
+      line-height: 40px;
+      text-align: center;
+      background-color: #a7a99a;
+      color: white;
+      border-radius: 50%;
+      border: 2px solid white;
+      vertical-align: top;
+    }
+  }
+}
+// .footer__triangle {
+//   @include triangle(45px, #000, up);
+// }

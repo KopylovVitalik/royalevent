@@ -77,3 +77,9 @@
     }
   }
 }
+
+@include mobile {
+  .card {
+    position: static;
+  }
+}
